@@ -1,5 +1,5 @@
 # wayfinder
-Use the Wayfinder plugin to easily select nested blocks. Wayfinder also lets you know the type of block and its active class names.
+Use the Wayfinder WordPress plugin to easily select nested blocks within the page editor. Wayfinder also lets you know the type of block and its active class names.
 
 Features
 
