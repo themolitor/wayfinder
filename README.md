@@ -8,3 +8,4 @@ Features
     View block outline on hover (optional)
     See spacer blocks outline at all times (optional)
 
+More details: https://wordpress.org/plugins/wayfinder/
