@@ -16,6 +16,12 @@
 	padding: 10px 13px;
 }
 
+/*BUTTONS*/
+.wp-block-button__link {
+	background-color: #862633;
+	border-radius: 0;
+}
+
 /*UL BLOCK*/
 ul.wp-block:not(.block-list-appender),
 ol.wp-block:not(.block-list-appender) {
@@ -51,26 +57,26 @@ figure.wp-block-image.wp-block {
 .wp-block.wp-block-spacer {
 	padding: 0;
 }
-.wayfinder-spacer-outline .wp-block-spacer:not(.block-list-appender) {
+.block-editor-page.wayfinder-spacer-outline .wp-block-spacer:not(.block-list-appender) {
 	outline: 1px dashed rgba(0,0,0,.15);
 }
 
 
 /*HOVER + FOCUS + SELECTED*/
-.wayfinder-outline *[data-title]:hover,
-.wayfinder-outline *[data-title]:focus,
-.wayfinder-outline *[data-title].is-selected,
-.wayfinder-outline *[data-title].has-child-selected {
+.block-editor-page.wayfinder-outline *[data-title]:hover,
+.block-editor-page.wayfinder-outline *[data-title]:focus,
+.block-editor-page.wayfinder-outline *[data-title].is-selected,
+.block-editor-page.wayfinder-outline *[data-title].has-child-selected {
 	outline: 1px dashed var(--wp-admin-theme-color);
 }
 
 /*SELECTED HOVER*/
-.wayfinder-outline *[data-title].is-selected:hover. {
+.block-editor-page.wayfinder-outline *[data-title].is-selected:hover. {
 	outline: 1px solid var(--wp-admin-theme-color);
 }
 
 /*BLOCK TITLE*/
-.wayfinder-title *[data-title]:hover:before {
+.block-editor-page.wayfinder-title *[data-title]:hover:before {
 	content: attr(data-title);
 	position: absolute;
 	bottom: 100%;
@@ -94,7 +100,7 @@ figure.wp-block-image.wp-block {
 }
 
 /*BLOCK CLASSES*/
-.wayfinder-classes *[data-title]:hover:after {	
+.block-editor-page.wayfinder-classes *[data-title]:hover:after {	
 	content: attr(class);
 	position: absolute;
 	top: 100%;
