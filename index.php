@@ -319,6 +319,6 @@ function custom_admin_body_class( $classes ) {
 function enqueue_wayfinder() {
 
 	global $wayfinder_version; 
-    wp_enqueue_style( 'wayfinder_css',plugin_dir_url( __FILE__ ).'editor-style.css', array(), $wayfinder_version);
+    wp_enqueue_style( 'wayfinder_css',plugin_dir_url( __FILE__ ).'css/editor-style.css', array(), $wayfinder_version);
 }
 add_action( 'admin_enqueue_scripts', 'enqueue_wayfinder' );
