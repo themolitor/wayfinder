@@ -5,5 +5,6 @@ Wayfinder also lets you know the type of block and its active class names.
 
 More details: https://wordpress.org/plugins/wayfinder/
 &nbsp;
+&nbsp;
 
 ![Wayfinder in action](https://ps.w.org/wayfinder/assets/screenshot-1.gif)
