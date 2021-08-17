@@ -54,6 +54,7 @@ Please feel free to DM me on twitter with any questions.
 = 1.0.8 =
 
 * Added support for WordPress 5.8
+* Fixed issue with title/classes/outlines showing on non-block editor pages. 
 
 = 1.0.7 =
 
