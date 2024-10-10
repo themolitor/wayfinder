@@ -3,13 +3,15 @@
 /* Plugin Name: Wayfinder
  * Plugin URI: https://wordpress.org/plugins/wayfinder
  * Description: Easily select and identify nested blocks in the editor.
- * Version: 1.0.8
+ * Version: 1.1.7
  * Author: THE MOLITOR
  * Author URI: https://themolitor.com
  * Text Domain: wayfinder
+ * License: GPL-2.0+
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 */
 
-$wayfinder_version = '1.0.8';
+$wayfinder_version = '1.1.7';
 
 
 //SET DEFAULTS ON ACTIVATION
@@ -188,53 +190,56 @@ function wayfinder_profile_fields( $user ) {
 
 		//TYPE
 		'<tr>'.
-			'<th><label for="userblocktype">'.__('Block type','wayfinder').'</label></th>'.
+			'<th><label for="userblocktype">' . esc_html__('Block type', 'wayfinder') . '</label></th>'.
 
 			'<td>'.
 				'<select type="text" name="userblocktype" id="userblocktype">';?>
-					<option value="site-default" <?php if($user_block_type == 'site-default' || !$user_block_type){ echo $selected_option;} ?>><?php _e('Site Default','Wayfinder');?></option>
-					<option value="show" <?php if($user_block_type == 'show'){ echo $selected_option;} ?>><?php _e('Show','Wayfinder');?></option>
-					<option value="hide" <?php if($user_block_type == 'hide'){ echo $selected_option;} ?>><?php _e('Hide','Wayfinder');?></option>
+					<option value="site-default" <?php echo ($user_block_type == 'site-default' || !$user_block_type) ? esc_attr($selected_option) : ''; ?>><?php esc_html_e('Site Default', 'wayfinder'); ?></option>
+					<option value="show" <?php echo ($user_block_type == 'show') ? esc_attr($selected_option) : ''; ?>><?php esc_html_e('Show', 'wayfinder'); ?></option>
+					<option value="hide" <?php echo ($user_block_type == 'hide') ? esc_attr($selected_option) : ''; ?>><?php esc_html_e('Hide', 'wayfinder'); ?></option>
 				<?php echo '</select>'.
 			'</td>'.
 		'</tr>'.
 		
 		//CLASSES
 		'<tr>'.
-			'<th><label for="userblockclasses">'.__('Block classes','wayfinder').'</label></th>'.
-
+			'<th><label for="userblockclasses">' . esc_html__('Block classes', 'wayfinder') . '</label></th>'.
 			'<td>'.
-				'<select type="text" name="userblockclasses" id="userblockclasses">';?>
-					<option value="site-default" <?php if($user_block_classes == 'site-default' || !$user_block_classes){ echo $selected_option;} ?>><?php _e('Site Default','Wayfinder');?></option>
-					<option value="show" <?php if($user_block_classes == 'show'){ echo $selected_option;} ?>><?php _e('Show','Wayfinder');?></option>
-					<option value="hide" <?php if($user_block_classes == 'hide'){ echo $selected_option;} ?>><?php _e('Hide','Wayfinder');?></option>
-				<?php echo '</select>'.
+				'<select type="text" name="userblockclasses" id="userblockclasses">';
+					?>
+					<option value="site-default" <?php selected($user_block_classes, 'site-default'); selected($user_block_classes, ''); ?>><?php esc_html_e('Site Default', 'wayfinder'); ?></option>
+					<option value="show" <?php selected($user_block_classes, 'show'); ?>><?php esc_html_e('Show', 'wayfinder'); ?></option>
+					<option value="hide" <?php selected($user_block_classes, 'hide'); ?>><?php esc_html_e('Hide', 'wayfinder'); ?></option>
+					<?php
+				echo '</select>'.
 			'</td>'.
 		'</tr>'.
 		
 		//OUTLINE
-		'<tr>'.
-			'<th><label for="userblockoutline">'.__('Block outline','wayfinder').'</label></th>'.
-
+		 '<tr>'.
+			'<th><label for="userblockoutline">' . esc_html__('Block outline', 'wayfinder') . '</label></th>'.
 			'<td>'.
-				'<select type="text" name="userblockoutline" id="userblockoutline">';?>
-					<option value="site-default" <?php if($user_block_outline == 'site-default' || !$user_block_outline){ echo $selected_option;} ?>><?php _e('Site Default','Wayfinder');?></option>
-					<option value="show" <?php if($user_block_outline == 'show'){ echo $selected_option;} ?>><?php _e('Show','Wayfinder');?></option>
-					<option value="hide" <?php if($user_block_outline == 'hide'){ echo $selected_option;} ?>><?php _e('Hide','Wayfinder');?></option>
-				<?php echo '</select>'.
+				'<select type="text" name="userblockoutline" id="userblockoutline">';
+					?>
+					<option value="site-default" <?php selected($user_block_outline, 'site-default'); selected($user_block_outline, ''); ?>><?php esc_html_e('Site Default', 'wayfinder'); ?></option>
+					<option value="show" <?php selected($user_block_outline, 'show'); ?>><?php esc_html_e('Show', 'wayfinder'); ?></option>
+					<option value="hide" <?php selected($user_block_outline, 'hide'); ?>><?php esc_html_e('Hide', 'wayfinder'); ?></option>
+					<?php
+				echo '</select>'.
 			'</td>'.
 		'</tr>'.
 		
 		//SPACER OUTLINE
 		'<tr>'.
-			'<th><label for="userspaceroutline">'.__('Spacer outline','wayfinder').'</label></th>'.
-
+			'<th><label for="userspaceroutline">' . esc_html__('Spacer outline', 'wayfinder') . '</label></th>'.
 			'<td>'.
-				'<select type="text" name="userspaceroutline" id="userspaceroutline">';?>
-					<option value="site-default" <?php if($user_spacer_outline == 'site-default' || !$user_spacer_outline){ echo $selected_option;} ?>><?php _e('Site Default','Wayfinder');?></option>
-					<option value="show" <?php if($user_spacer_outline == 'show'){ echo $selected_option;} ?>><?php _e('Show','Wayfinder');?></option>
-					<option value="hide" <?php if($user_spacer_outline == 'hide'){ echo $selected_option;} ?>><?php _e('Hide','Wayfinder');?></option>
-				<?php echo '</select>'.
+				'<select type="text" name="userspaceroutline" id="userspaceroutline">';
+					?>
+					<option value="site-default" <?php selected($user_spacer_outline, 'site-default'); selected($user_spacer_outline, ''); ?>><?php esc_html_e('Site Default', 'wayfinder'); ?></option>
+					<option value="show" <?php selected($user_spacer_outline, 'show'); ?>><?php esc_html_e('Show', 'wayfinder'); ?></option>
+					<option value="hide" <?php selected($user_spacer_outline, 'hide'); ?>><?php esc_html_e('Hide', 'wayfinder'); ?></option>
+					<?php
+				echo '</select>'.
 			'</td>'.
 		'</tr>'.
 
@@ -245,16 +250,33 @@ function wayfinder_profile_fields( $user ) {
 add_action( 'personal_options_update', 'wayfinder_save_profile_fields' );
 add_action( 'edit_user_profile_update', 'wayfinder_save_profile_fields' );
 
+
 function wayfinder_save_profile_fields( $user_id ) {
+    if ( !current_user_can( 'edit_user', $user_id ) ) {
+        return false;
+    }
 
-	if ( !current_user_can( 'edit_user', $user_id ) )
-		return false;
+    // Verify nonce
+    if ( !isset( $_POST['wayfinder_profile_nonce'] ) || !wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['wayfinder_profile_nonce'] ) ), 'wayfinder_profile_update' ) ) {
+	    return false;
+	}
 
-	update_usermeta( $user_id, 'userblocktype', $_POST['userblocktype'] );
-	update_usermeta( $user_id, 'userblockclasses', $_POST['userblockclasses'] );
-	update_usermeta( $user_id, 'userblockoutline', $_POST['userblockoutline'] );
-	update_usermeta( $user_id, 'userspaceroutline', $_POST['userspaceroutline'] );
+    $fields = ['userblocktype', 'userblockclasses', 'userblockoutline', 'userspaceroutline'];
+
+    foreach ( $fields as $field ) {
+        if ( isset( $_POST[$field] ) ) {
+            $value = sanitize_text_field( wp_unslash( $_POST[$field] ) );
+            update_user_meta( $user_id, $field, $value );
+        }
+    }
 }
+
+//CREATE NONCE FIELD
+function wayfinder_add_profile_nonce_field() {
+    wp_nonce_field( 'wayfinder_profile_update', 'wayfinder_profile_nonce' );
+}
+add_action( 'show_user_profile', 'wayfinder_add_profile_nonce_field' );
+add_action( 'edit_user_profile', 'wayfinder_add_profile_nonce_field' );
 
 	
 //ADD WAYFINDER CLASSES TO ADMIN BODY TAG

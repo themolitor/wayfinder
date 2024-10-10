@@ -1,0 +1,53 @@
+#: index.php:71
+msgid "Wayfinder Settings"
+msgstr ""
+
+#: index.php:78
+msgid "Display block type"
+msgstr ""
+
+
+#: index.php:86
+msgid "Display block classes"
+msgstr ""
+
+#: index.php:94
+msgid "Display block outline"
+msgstr ""
+
+#: index.php:102
+msgid "Display spacer outline"
+msgstr ""
+
+#: index.php:191
+msgid "Block type"
+msgstr ""
+
+#: index.php:191
+msgid "Block type"
+msgstr ""
+
+#: index.php:204
+msgid "Block classes"
+msgstr ""
+
+#: index.php:217
+msgid "Block outline"
+msgstr ""
+
+#: index.php:230
+msgid "Spacer outline"
+msgstr ""
+
+
+#: index.php:195 index.php:208 index.php:221 index.php:234
+msgid "Site Default"
+msgstr ""
+
+#: index.php:196 index.php:209 index.php:222 index.php:235
+msgid "Show"
+msgstr ""
+
+#: index.php:197 index.php:210 index.php:223 index.php:236
+msgid "Hide"
+msgstr ""
