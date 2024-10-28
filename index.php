@@ -1,9 +1,9 @@
 <?php
 
 /* Plugin Name: Wayfinder
- * Plugin URI: https://wordpress.org/plugins/wayfinder
+ * Plugin URI: https://themolitor.com/wayfinder
  * Description: Easily select and identify nested blocks in the editor.
- * Version: 1.1.7
+ * Version: 1.2.0
  * Author: THE MOLITOR
  * Author URI: https://themolitor.com
  * Text Domain: wayfinder
@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 */
 
-$wayfinder_version = '1.1.7';
+$wayfinder_version = '1.2.0';
 
 
 //SET DEFAULTS ON ACTIVATION
@@ -342,5 +342,6 @@ function enqueue_wayfinder() {
 
 	global $wayfinder_version; 
     wp_enqueue_style( 'wayfinder_css',plugin_dir_url( __FILE__ ).'css/editor-style.css', array(), $wayfinder_version);
+    wp_enqueue_script('wayfinder_toggle', plugin_dir_url(__FILE__) . 'js/wayfinder-toggle.js', array('wp-data'), $wayfinder_version, true);
 }
 add_action( 'admin_enqueue_scripts', 'enqueue_wayfinder' );

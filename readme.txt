@@ -2,8 +2,8 @@
 Contributors: themolitor
 Tags: block, finder, helper, identifier, selector
 Requires at least: 4.7
-Tested up to: 6.6
-Stable tag: 1.1.7
+Tested up to: 6.7
+Stable tag: 1.2.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -20,6 +20,7 @@ Use the Wayfinder plugin to easily select nested blocks. Wayfinder also lets you
 * View block classes on hover (optional)
 * View block outline on hover (optional)
 * See spacer blocks outline at all times (optional)
+* "Shift + Alt + W" to toggle Wayfinder on/off
 
 = Links =
 * [Support + Details](https://twitter.com/theMOLITOR/status/1415744294414000128)
@@ -50,6 +51,11 @@ Please feel free to DM me on twitter with any questions.
 
 
 == Changelog ==
+
+= 1.2.0 =
+
+* Added support for WordPress 6.7.
+* Added short key support [Shift + Alt + W] to toggle Wayfinder on/off.
 
 = 1.1.7 =
 
